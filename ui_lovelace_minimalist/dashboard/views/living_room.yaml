@@ -1,0 +1,6 @@
+title: "Living Room"
+path: "living_room"
+cards:
+  - type: 'custom:button-card'
+    template: card_generic
+    entity: light.bedroom_lamp

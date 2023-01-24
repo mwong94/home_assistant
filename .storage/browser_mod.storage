@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "browser_mod.storage",
+  "data": {
+    "browsers": {
+      "3491f6af-ea76eb34": {
+        "last_seen": "2023-01-19T18:23:41.347671+00:00",
+        "registered": true,
+        "locked": false,
+        "camera": false,
+        "settings": {
+          "hideSidebar": null,
+          "hideHeader": null,
+          "defaultPanel": null,
+          "sidebarPanelOrder": null,
+          "sidebarHiddenPanels": null,
+          "sidebarTitle": null,
+          "faviconTemplate": null,
+          "titleTemplate": null,
+          "hideInteractIcon": null,
+          "autoRegister": null,
+          "lockRegister": null
+        },
+        "meta": "default"
+      }
+    },
+    "version": "2.0",
+    "settings": {
+      "hideSidebar": null,
+      "hideHeader": null,
+      "defaultPanel": null,
+      "sidebarPanelOrder": null,
+      "sidebarHiddenPanels": null,
+      "sidebarTitle": null,
+      "faviconTemplate": null,
+      "titleTemplate": null,
+      "hideInteractIcon": null,
+      "autoRegister": true,
+      "lockRegister": null
+    },
+    "user_settings": {}
+  }
+}

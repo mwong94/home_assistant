@@ -1,0 +1,6 @@
+title: "Garage"
+path: "garage"
+cards:
+  - type: 'custom:button-card'
+    template: card_generic
+    entity: light.bedroom_lamp

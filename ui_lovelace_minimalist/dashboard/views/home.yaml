@@ -1,0 +1,169 @@
+title: "Home"
+path: "home"
+cards:
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            template: "card_esh_welcome"
+            triggers_update: "input_boolean.minimalist_dropdown"
+            variables:
+              ulm_card_esh_welcome_collapse: input_boolean.minimalist_dropdown
+              ulm_weather: "weather.openweathermap_riverside"
+              entity_1:
+                nav: "living_room"
+                icon: "mdi:sofa"
+                name: "Living Room"
+                color: "blue"
+              entity_2:
+                nav: "bedroom"
+                icon: "mdi:bed-king"
+                name: "Bedroom"
+                color: "red"
+              entity_3:
+                nav: "office"
+                icon: "mdi:desktop-tower"
+                name: Office
+                color: "yellow"
+              entity_4:
+                nav: "garage"
+                icon: "mdi:garage"
+                name: Garage
+                color: "green"
+
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            template: card_person
+            entity: person.max_wong
+            variables:
+              ulm_card_person_entity: person.max_wong
+              ulm_card_person_use_entity_picture: true
+              ulm_card_person_icon: mdi:face-man
+              ulm_card_person_battery: sensor.iphone_battery_level
+          - type: "custom:button-card"
+            template: card_person
+            entity: person.max_wong
+            variables:
+              ulm_card_person_entity: person.max_wong
+              ulm_card_person_use_entity_picture: true
+              ulm_card_person_icon: mdi:face-woman
+              ulm_card_person_battery: sensor.iphone_battery_level
+
+      - type: entities
+        entities:
+          - type: divider
+
+      - type: "custom:button-card"
+        template: card_title
+        name: Rooms
+        # label: "Subtitle"
+
+      - type: grid
+        columns: 2
+        cards:
+          - type: "custom:button-card"
+            template:
+              - card_room
+            name: Living Room
+            entity: light.christmas_tree
+            icon: mdi:sofa-outline
+            tap_action:
+              action: navigate
+              navigation_path: "living_room"
+            variables:
+              label: false
+              label_use_temperature: false
+              label_use_brightness: false
+              entity_1:
+                entity_id: light.christmas_tree
+                templates:
+                  - green_on
+                tap_action:
+                  action: toggle
+
+          - type: "custom:button-card"
+            template:
+              - card_room
+            name: Bedroom
+            entity: light.bedroom_lamp
+            icon: mdi:bed-king-outline
+            tap_action:
+              action: navigate
+              navigation_path: "bedroom"
+            variables:
+              label_use_temperature: false
+              label_use_brightness: false
+              entity_1:
+                entity_id: light.bedroom_lamp
+                templates:
+                  - yellow_on
+                tap_action:
+                  action: toggle
+              entity_2:
+                entity_id: light.christmas_tree
+                templates:
+                  - green_on
+                tap_action:
+                  action: toggle
+
+          - type: "custom:button-card"
+            template:
+              - card_room
+            name: Office
+            entity: binary_sensor.motion_sensor_1_iaszone
+            icon: mdi:desktop-tower
+            tap_action:
+              action: navigate
+              navigation_path: "office"
+            variables:
+              label_use_temperature: false
+              label_use_brightness: false
+              entity_1:
+                entity_id: binary_sensor.motion_sensor_1_iaszone
+                templates:
+                  - blue_on
+                tap_action:
+                  action: none
+              entity_2:
+                entity_id: binary_sensor.motion_sensor_1_occupancy
+                templates:
+                  - blue_on
+                tap_action:
+                  action: none
+
+          - type: "custom:button-card"
+            template:
+              - card_room
+            name: Garage
+            entity: binary_sensor.contact_sensor_1
+            icon: mdi:garage
+            tap_action:
+              action: navigate
+              navigation_path: "garage"
+            variables:
+              label_use_temperature: false
+              label_use_brightness: false
+              entity_1:
+                entity_id: binary_sensor.contact_sensor_1
+                templates:
+                  - red_on
+                tap_action:
+                  action: none
+
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - type: divider
+          - type: "custom:button-card"
+            template: card_title
+            name: Sunrise Alarm Settings
+
+          - type: "custom:button-card"
+            template:
+              - card_input_datetime
+            entity: input_datetime.alarm_time
+            variables:
+              ulm_card_input_datetime_name: "Alarm Time"

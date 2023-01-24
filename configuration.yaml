@@ -1,0 +1,37 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.0.0/16
+
+homekit:
+  filter:
+    include_entities:
+      - camera.blink_garage
+      - switch.christmas_tree
+      - switch.bedroom_heater
+      - light.bedroom_lamps
+      - light.bedroom_ceiling_lights
+
+timer:
+  contact_sensor_debounce:
+    name: Contact Sensor Debounce
+    duration: "00:00:05"
+input_boolean:
+  contact_sensor_latch:
+    name: Contact Sensor Latch
+    initial: off

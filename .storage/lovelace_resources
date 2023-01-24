@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375252",
+        "type": "module",
+        "id": "0f46b4a1eec74d0e9d58cb5db4994c8c"
+      },
+      {
+        "url": "/hacsfiles/lovelace-layout-card/layout-card.js?hacstag=156434866244",
+        "type": "module",
+        "id": "62edf3aac2d4472fa78d3001995ae8a3"
+      },
+      {
+        "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620110",
+        "type": "module",
+        "id": "ae9eab183bd14504a11d1e495658227d"
+      },
+      {
+        "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524320",
+        "type": "module",
+        "id": "29bf2b4c27594a99b21b2b588110314a"
+      },
+      {
+        "url": "/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js?hacstag=1448997001730",
+        "type": "module",
+        "id": "23c7dc599a7b436fbea20a045ecaa754"
+      },
+      {
+        "url": "/hacsfiles/lovelace-time-picker-card/time-picker-card.js?hacstag=261262884140",
+        "type": "module",
+        "id": "3464951eb5434482a323ab4a6fd8b012"
+      },
+      {
+        "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js?hacstag=1677445841121",
+        "type": "module",
+        "id": "4ac4e25070d2411981fe5cff94af472a"
+      },
+      {
+        "url": "/hacsfiles/button-card/button-card.js?hacstag=146194325342",
+        "type": "module",
+        "id": "c7bdc52453244aac922044cd3a5e05a6"
+      },
+      {
+        "url": "/hacsfiles/slider-button-card/slider-button-card.js?hacstag=49879403311010",
+        "type": "module",
+        "id": "6ba9fea8baea49b6bc633c0b52335330"
+      },
+      {
+        "url": "/hacsfiles/lovelace-state-switch/state-switch.js?hacstag=158756598195",
+        "type": "module",
+        "id": "2c5ec18ed0844d9ab893139a2fa7f142"
+      },
+      {
+        "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js?hacstag=1485208381165",
+        "type": "module",
+        "id": "7aef6c7c73da4f9282801b29584e82f1"
+      },
+      {
+        "url": "/hacsfiles/my-cards/my-cards.js?hacstag=399108901102",
+        "type": "module",
+        "id": "5395ecd814f44e50a02b7231abe90fa0"
+      },
+      {
+        "url": "/hacsfiles/light-entity-card/light-entity-card.js?hacstag=168744428500",
+        "type": "module",
+        "id": "3e1b1bd8ba834ab3b5a3e1e82bbcdb3d"
+      },
+      {
+        "url": "/hacsfiles/simple-weather-card/simple-weather-card-bundle.js?hacstag=172998062083",
+        "type": "module",
+        "id": "742c2f1f0b53432e81fb123be218ec56"
+      },
+      {
+        "url": "/hacsfiles/lovelace-hourly-weather/hourly-weather.js?hacstag=499270202493",
+        "type": "module",
+        "id": "915c664f65ce4050ac77cd3f450b1316"
+      }
+    ]
+  }
+}

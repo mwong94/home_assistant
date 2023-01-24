@@ -1,0 +1,1139 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "core.device_registry",
+  "data": {
+    "devices": [
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "f93f28b7641891c60891d769368ef360",
+        "identifiers": [
+          [
+            "hassio",
+            "core"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "Home Assistant Core",
+        "name_by_user": null,
+        "name": "Home Assistant Core",
+        "sw_version": "2023.1.7",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "76e2747ebe7b5c21ef505bdce22c6ac4",
+        "identifiers": [
+          [
+            "hassio",
+            "supervisor"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "Home Assistant Supervisor",
+        "name_by_user": null,
+        "name": "Home Assistant Supervisor",
+        "sw_version": "2022.12.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "f57f3c7e74005305f2e9c0eeb6c13655",
+        "identifiers": [
+          [
+            "hassio",
+            "OS"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "Home Assistant Operating System",
+        "name_by_user": null,
+        "name": "Home Assistant Operating System",
+        "sw_version": "9.4",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "d7cecc3669106c93322697c1f50aeb79"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "bluetooth",
+            "48:68:4A:B3:B5:AE"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "usb:v1D6Bp0246d053F",
+        "id": "340d2b8ad8dd5b7910c4a77ecd1ad549",
+        "identifiers": [],
+        "manufacturer": "Intel Corporate",
+        "model": "0aaa (8087:0aaa)",
+        "name_by_user": null,
+        "name": "hci0 (48:68:4A:B3:B5:AE)",
+        "sw_version": "haos",
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "df0ea1575436c60ade9617fe14736efa"
+        ],
+        "configuration_url": "http://192.168.0.153:1400/support/review",
+        "connections": [
+          [
+            "mac",
+            "54:2a:1b:d1:d0:00"
+          ],
+          [
+            "upnp",
+            "uuid:RINCON_542A1BD1D00001400"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "b276fa610d43b8fdf3edd67245583008",
+        "identifiers": [
+          [
+            "sonos",
+            "RINCON_542A1BD1D00001400"
+          ]
+        ],
+        "manufacturer": "Sonos",
+        "model": "Beam",
+        "name_by_user": null,
+        "name": "Living Room",
+        "sw_version": "14.20.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "86a1a6f001c48bc2db38548bbe64f91d"
+        ],
+        "configuration_url": "http://192.168.0.15:80/",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "208b9fc677768893fcd4c10c2c6d14ce",
+        "identifiers": [
+          [
+            "octoprint",
+            "4f71893a-2552-427b-b70f-3dd284e6d48b"
+          ]
+        ],
+        "manufacturer": "OctoPrint",
+        "model": null,
+        "name_by_user": null,
+        "name": "OctoPrint",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "222262c6bdce4fa1be7b13d65f306c12"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "d4:90:9c:cf:65:ae"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "3fd4f16b884d45a81b39295486c29a04",
+        "identifiers": [
+          [
+            "apple_tv",
+            "D4:90:9C:CF:65:AE"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "HomePod",
+        "name_by_user": null,
+        "name": "Living Room (2)",
+        "sw_version": "16.2",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/core_configurator",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "d6cd843f17eb0cf26203a1ca62046061",
+        "identifiers": [
+          [
+            "hassio",
+            "core_configurator"
+          ]
+        ],
+        "manufacturer": "Official add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "File editor",
+        "sw_version": "5.5.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "8f757101652823237e8e9dab99f6ddc6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0d4d49cf47d111fd2e8297483221f442",
+        "identifiers": [
+          [
+            "mobile_app",
+            "AF728F49-C744-47AC-8282-55D38F417BF2"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone15,2",
+        "name_by_user": null,
+        "name": "Max’s iPhone",
+        "sw_version": "16.3",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/core_nginx_proxy",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "4253104269b6459ad0cdf989b39cf598",
+        "identifiers": [
+          [
+            "hassio",
+            "core_nginx_proxy"
+          ]
+        ],
+        "manufacturer": "Official add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "NGINX Home Assistant SSL proxy",
+        "sw_version": "3.2.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/core_ssh",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "47102df286261f2f8dad5d6e1f55d11a",
+        "identifiers": [
+          [
+            "hassio",
+            "core_ssh"
+          ]
+        ],
+        "manufacturer": "Official add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "Terminal & SSH",
+        "sw_version": "9.6.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/core_letsencrypt",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "f4afad5e75092c0f2dff6f392a0c7e8d",
+        "identifiers": [
+          [
+            "hassio",
+            "core_letsencrypt"
+          ]
+        ],
+        "manufacturer": "Official add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "Let's Encrypt",
+        "sw_version": "4.12.7",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/a0d7b954_ssh",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "309931b495890027dcc6ac0b4e176ad7",
+        "identifiers": [
+          [
+            "hassio",
+            "a0d7b954_ssh"
+          ]
+        ],
+        "manufacturer": "Home Assistant Community Add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "SSH & Web Terminal",
+        "sw_version": "13.0.2",
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "4bfc1c68eea398071b8609b62380b6b4"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "zigbee",
+            "1c:34:f1:ff:fe:ea:fd:75"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "74963b7bf8305c8f4dd05bce290332c2",
+        "identifiers": [
+          [
+            "zha",
+            "1c:34:f1:ff:fe:ea:fd:75"
+          ]
+        ],
+        "manufacturer": "ZHA",
+        "model": "EZSP = Silicon Labs EmberZNet protocol: Elelabs, HUSBZB-1, Telegesis",
+        "name_by_user": null,
+        "name": "Zigbee Coordinator",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "e426216579ae130dc886c78389c4a4ab"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "7db384a00e307518ce53d669fdd51ddc",
+        "identifiers": [
+          [
+            "blink",
+            "G8V190012133208P"
+          ]
+        ],
+        "manufacturer": "Blink",
+        "model": "mini",
+        "name_by_user": null,
+        "name": "Garage",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/core_matter_server",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "d65edb2b26945fd6b6ddd1b8f070ab1c",
+        "identifiers": [
+          [
+            "hassio",
+            "core_matter_server"
+          ]
+        ],
+        "manufacturer": "Official add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "Matter Server",
+        "sw_version": "2.1.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "49c8b691057f86d357a9a5c25371e23a"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "d5:5a:9a:54:31:67"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "6635eb69a4ba4eef2d9dc99b1bfb88f0",
+        "identifiers": [
+          [
+            "homekit",
+            "49c8b691057f86d357a9a5c25371e23a",
+            "homekit.bridge"
+          ]
+        ],
+        "manufacturer": "Home Assistant",
+        "model": "HomeKit Bridge",
+        "name_by_user": null,
+        "name": "Home Assistant Bridge:21063",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "013fa0032c18fe0259f87114b71d6b56"
+        ],
+        "configuration_url": "homeassistant://hacs",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "7066df3e0c76dc35024fb4a8618cb9ee",
+        "identifiers": [
+          [
+            "hacs",
+            "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+          ]
+        ],
+        "manufacturer": "hacs.xyz",
+        "model": "",
+        "name_by_user": null,
+        "name": "HACS",
+        "sw_version": "1.30.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "4bfc1c68eea398071b8609b62380b6b4"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "zigbee",
+            "00:15:8d:00:07:be:df:09"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4d9df635d9c3c788dc31b57876aae6b3",
+        "identifiers": [
+          [
+            "zha",
+            "00:15:8d:00:07:be:df:09"
+          ]
+        ],
+        "manufacturer": "LUMI",
+        "model": "lumi.sensor_motion.aq2",
+        "name_by_user": "Motion Sensor",
+        "name": "LUMI lumi.sensor_motion.aq2",
+        "sw_version": null,
+        "via_device_id": "74963b7bf8305c8f4dd05bce290332c2"
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "4bfc1c68eea398071b8609b62380b6b4"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "zigbee",
+            "00:15:8d:00:07:0b:37:a6"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "d10bfed67f09ed456ad2dabb1311dc96",
+        "identifiers": [
+          [
+            "zha",
+            "00:15:8d:00:07:0b:37:a6"
+          ]
+        ],
+        "manufacturer": "LUMI",
+        "model": "lumi.sensor_magnet.aq2",
+        "name_by_user": "Contact Sensor",
+        "name": "LUMI lumi.sensor_magnet.aq2",
+        "sw_version": null,
+        "via_device_id": "74963b7bf8305c8f4dd05bce290332c2"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/a0d7b954_nginxproxymanager",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "f44a20e57fa65a279674bebcae26750f",
+        "identifiers": [
+          [
+            "hassio",
+            "a0d7b954_nginxproxymanager"
+          ]
+        ],
+        "manufacturer": "Home Assistant Community Add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "Nginx Proxy Manager",
+        "sw_version": "0.12.3",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/core_mariadb",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "b3ded05196f18b0d431f04657feffbd6",
+        "identifiers": [
+          [
+            "hassio",
+            "core_mariadb"
+          ]
+        ],
+        "manufacturer": "Official add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "MariaDB",
+        "sw_version": "2.5.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "b6941e22b5fd92e91a3b56031486becf",
+          "62852f7d304d569365ed2bacd05aa2db"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "54:af:97:2d:9a:89"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "1.0",
+        "id": "8f2080282654ddf8b3990c5cf2ca3520",
+        "identifiers": [
+          [
+            "tplink",
+            "54:AF:97:2D:9A:89"
+          ]
+        ],
+        "manufacturer": "TP-Link",
+        "model": "EP25(US)",
+        "name_by_user": "Christmas Tree",
+        "name": "TP-LINK_Smart Plug_9A89",
+        "sw_version": "1.0.6 Build 210928 Rel.185924",
+        "via_device_id": null
+      },
+      {
+        "area_id": "bedroom",
+        "config_entries": [
+          "781c443c50c6731f7e736848f49d0a40"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "54:af:97:2d:83:d2"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "1.0",
+        "id": "7e6a7bc275c34ae5a8a5c3d1ee327571",
+        "identifiers": [
+          [
+            "tplink",
+            "54:AF:97:2D:83:D2"
+          ]
+        ],
+        "manufacturer": "TP-Link",
+        "model": "EP25(US)",
+        "name_by_user": "Bedroom Heater",
+        "name": "TP-LINK_Smart Plug_83D2",
+        "sw_version": "1.0.6 Build 210928 Rel.185924",
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "28d1a76886d22013416c0ae01d8eb47f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "fb4c1a42eb7df3cab7d36e392f99ac4d",
+        "identifiers": [
+          [
+            "openweathermap",
+            "33.95710034115005-"
+          ]
+        ],
+        "manufacturer": "OpenWeather",
+        "model": null,
+        "name_by_user": null,
+        "name": "OpenWeatherMap",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "28d1a76886d22013416c0ae01d8eb47f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "63a49d1821ba0f908c9e24984118be8a",
+        "identifiers": [
+          [
+            "openweathermap",
+            "33.95710034115005--117.32308424952352"
+          ]
+        ],
+        "manufacturer": "OpenWeather",
+        "model": null,
+        "name_by_user": null,
+        "name": "OpenWeatherMap",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "bedroom",
+        "config_entries": [
+          "4bfc1c68eea398071b8609b62380b6b4"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "zigbee",
+            "00:15:8d:00:06:b4:76:44"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "d35ec59ade6458598d000b11f075dacd",
+        "identifiers": [
+          [
+            "zha",
+            "00:15:8d:00:06:b4:76:44"
+          ]
+        ],
+        "manufacturer": "LUMI",
+        "model": "lumi.remote.b1acn01",
+        "name_by_user": "Mini Button",
+        "name": "LUMI lumi.remote.b1acn01",
+        "sw_version": null,
+        "via_device_id": "74963b7bf8305c8f4dd05bce290332c2"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "configuration_url": "homeassistant://hassio/addon/a0d7b954_vscode",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "3e9b01c67abb760335f2c40e14b984ac",
+        "identifiers": [
+          [
+            "hassio",
+            "a0d7b954_vscode"
+          ]
+        ],
+        "manufacturer": "Home Assistant Community Add-ons",
+        "model": "Home Assistant Add-on",
+        "name_by_user": null,
+        "name": "Studio Code Server",
+        "sw_version": "5.5.2",
+        "via_device_id": null
+      },
+      {
+        "area_id": "bedroom",
+        "config_entries": [
+          "a210d7ab91513aa0fecbe13c7f66f02e"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "e8:48:b8:d7:5b:47"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "3.0",
+        "id": "f86a3d9529a0b7fcf7edde3a406af80c",
+        "identifiers": [
+          [
+            "tplink",
+            "e8:48:b8:d7:5b:47"
+          ]
+        ],
+        "manufacturer": "TP-Link",
+        "model": "KL130(US)",
+        "name_by_user": null,
+        "name": "Max’s Lamp",
+        "sw_version": "1.0.13 Build 220714 Rel.162126",
+        "via_device_id": null
+      },
+      {
+        "area_id": "bedroom",
+        "config_entries": [
+          "8ca394ca7bc2454107a85a267b70ca2c"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "e8:48:b8:b5:4f:20"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "3.0",
+        "id": "3f894f4cfe28b7833ff1b489904455dd",
+        "identifiers": [
+          [
+            "tplink",
+            "e8:48:b8:b5:4f:20"
+          ]
+        ],
+        "manufacturer": "TP-Link",
+        "model": "KL130(US)",
+        "name_by_user": null,
+        "name": "Sophie’s Lamp",
+        "sw_version": "1.0.13 Build 220714 Rel.162126",
+        "via_device_id": null
+      },
+      {
+        "area_id": "bedroom",
+        "config_entries": [
+          "54eb3971113174de55dfde2cd34d160f"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "c0:06:c3:54:92:22"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "3.0",
+        "id": "5ce19e74e0e533ba647ef13c14c04d18",
+        "identifiers": [
+          [
+            "tplink",
+            "c0:06:c3:54:92:22"
+          ]
+        ],
+        "manufacturer": "TP-Link",
+        "model": "KL130(US)",
+        "name_by_user": null,
+        "name": "Bedroom Celing Light 2",
+        "sw_version": "1.0.13 Build 220714 Rel.162126",
+        "via_device_id": null
+      },
+      {
+        "area_id": "bedroom",
+        "config_entries": [
+          "fccb05a01a44b9a7ee528de1af67b47d"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "e8:48:b8:39:80:5d"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "3.0",
+        "id": "cb9d80662eabdb391e5f238cff8ce254",
+        "identifiers": [
+          [
+            "tplink",
+            "e8:48:b8:39:80:5d"
+          ]
+        ],
+        "manufacturer": "TP-Link",
+        "model": "KL130(US)",
+        "name_by_user": null,
+        "name": "Bedroom Ceiling Light 1",
+        "sw_version": "1.0.6 Build 210330 Rel.173743",
+        "via_device_id": null
+      }
+    ],
+    "deleted_devices": [
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "c5:aa:17:06:f4:95"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "ff9b6fc734a17a536a197190877e7004",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "c21046c3a4b6ac52f636eb0a2ea49925",
+        "orphaned_timestamp": 1674107081.5168068
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "c7:63:b8:74:19:c7"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "8f7feff370d170624f47c4037267b2ee",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "9b621557f8d107870973a3577769038e",
+        "orphaned_timestamp": 1674107086.5756547
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "ibeacon",
+            "74278bda-b644-4520-8f0c-720eaf059935_256_6015_B0:D2:78:F7:48:A9"
+          ]
+        ],
+        "id": "2e0e49d4c9a3c146cc4071dbe924a13e",
+        "orphaned_timestamp": 1674532166.5126815
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "cd:0f:78:03:84:4d"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "a6158639de9a0a4230a9d44b4bf7fa08",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "1936702b95d46c68078435b2ddc22e8b",
+        "orphaned_timestamp": 1674107831.9755454
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "f6:12:52:d4:b9:85"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "ff22e91e60660a280bb18c45895e135b",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "a4b807d50e45e23c9df113001c90e5bd",
+        "orphaned_timestamp": 1674107839.3057866
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "c3:50:9a:af:aa:91"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "37d34ff56677f201bc902950b8901a09",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "25569efe47b37414704ad91a46fe72b3",
+        "orphaned_timestamp": 1674107842.0346081
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "ec:1e:a0:df:ce:2e"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "d2b79711f8254f4a168997a9fc4098d2",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "ea1c84f09d84663712676d3f9d32bb52",
+        "orphaned_timestamp": 1674107851.9564703
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "eb:44:3d:05:0f:d8"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "83cf1fd4dc41336e1f398ce57e0ee019",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "e169678f8049e40efade69132990ccdb",
+        "orphaned_timestamp": 1674108956.2041066
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "48:c1:8f:02:f3:10"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "4961913aa10601196649eba00991e526",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "74cf8baf3c0cf9076f27fdcc33ddb31c",
+        "orphaned_timestamp": 1674108959.8618355
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "cc:fc:41:b9:7e:69"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "d102cd9f5161abd1fcdbdfb5026a3e58",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "5b68af288777685232fadd96db90eda3",
+        "orphaned_timestamp": 1674109002.314884
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "browser_mod",
+            "3491f6af-ea76eb34"
+          ]
+        ],
+        "id": "253401ef4671f0ba2c087aea7b130261",
+        "orphaned_timestamp": 1674152597.7580214
+      },
+      {
+        "config_entries": [
+          "44f1556db87af7232562938d07c1c76e"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "hassio",
+            "core_duckdns"
+          ]
+        ],
+        "id": "a835bd7b02ff0d2545e4f4505c8d4346",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "openweathermap",
+            "32.83031934200752-"
+          ]
+        ],
+        "id": "d7a576dfbc3b53753264d6e802751f1d",
+        "orphaned_timestamp": 1674504709.526157
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "openweathermap",
+            "32.83031934200752--117.1806913764525"
+          ]
+        ],
+        "id": "d00b93819a4a565dcd68f5385936a906",
+        "orphaned_timestamp": 1674504709.526157
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "ibeacon",
+            "71b2f817-2875-4835-a94e-f9b6c31a5a24_123_456_48:B0:2D:25:3C:30"
+          ]
+        ],
+        "id": "1056014ceac1fa76ee3cf9403ee30bfd",
+        "orphaned_timestamp": 1674532166.5126815
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "ibeacon",
+            "4170db02-00ca-fffb-8ab2-107000000057_1_30_D8:94:90:4B:92:6F"
+          ]
+        ],
+        "id": "1f6bc90cc0a8f1b3697ceab7fe06f16c",
+        "orphaned_timestamp": 1674532166.5126815
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "ibeacon",
+            "08c18abc-056e-8332-ecf8-04702dbc2ae8_1_1_A0:6C:65:94:B4:DE"
+          ]
+        ],
+        "id": "def6886da8b0d0d5cd5b81054f49ecdf",
+        "orphaned_timestamp": 1674532166.5126815
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "accuweather",
+            "2628167"
+          ]
+        ],
+        "id": "2c28ceace5ee730150bdfbae77c9e454",
+        "orphaned_timestamp": 1674532225.9705098
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "54:af:97:2d:a5:0b"
+          ]
+        ],
+        "identifiers": [
+          [
+            "tplink",
+            "54:AF:97:2D:A5:0B"
+          ]
+        ],
+        "id": "67b12498bae9ff4bc6b6a89508c656b2",
+        "orphaned_timestamp": 1674532436.7750108
+      }
+    ]
+  }
+}

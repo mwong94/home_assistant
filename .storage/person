@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "name": "Max Wong",
+        "user_id": "5c1953b4f9e049b0abf7f5812359fce6",
+        "device_trackers": [
+          "device_tracker.iphone"
+        ],
+        "id": "max_wong",
+        "picture": null
+      },
+      {
+        "name": "Sophie You",
+        "device_trackers": [],
+        "user_id": "910eb568d3f047028bf85ca06a989893",
+        "picture": null,
+        "id": "sophie_you"
+      }
+    ]
+  }
+}
