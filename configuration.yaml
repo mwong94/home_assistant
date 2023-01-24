@@ -5,6 +5,22 @@ default_config:
 frontend:
   themes: !include_dir_merge_named themes
 
+template:
+  - sensor:
+      - name: Car Charge Level
+        unit_of_measurement: "%"
+        state: "{{ state_attr('sensor.fordpass_elVeh', 'Battery Fill Level')}}"
+  - sensor:
+      - name: Car Range
+        unit_of_measurement: "km"
+        state: "{{ state_attr('sensor.fordpass_elVeh', 'elVehDTE')}}"
+
+# lovelace:
+#   mode: yaml
+#   resources:
+#     - type: module
+#       url: /config/www/community/lovelace-mushroom/mushroom.js
+
 # Text to speech
 tts:
   - platform: google_translate

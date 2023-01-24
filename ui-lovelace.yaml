@@ -1,0 +1,279 @@
+title: Riverside
+views:
+  - theme: minimalist-desktop
+    path: home
+    type: custom:vertical-layout
+    layout: {}
+    icon: mdi:home
+    title: Home
+    badges: []
+    cards:
+      - type: custom:mushroom-title-card
+        title: Riverside Apt.
+        alignment: center
+      - type: custom:mushroom-title-card
+        title: TESTING
+        alignment: center
+      - type: custom:hourly-weather
+        entity: weather.openweathermap_riverside
+        num_segments: "24"
+        label_spacing: "4"
+        icons: true
+        show_wind: speed
+        show_precipitation_amounts: false
+        name: null
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-entity-card
+            entity: person.max_wong
+            fill_container: false
+            name: Max
+            layout: vertical
+      - type: custom:mushroom-title-card
+        title: Outlets/Lights
+        alignment: center
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: light
+            entity: light.christmas_tree
+          - type: entity
+            entity: switch.bedroom_heater
+            tap_action:
+              action: toggle
+            icon_color: red
+        alignment: center
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-entity-card
+                entity: light.bedroom_lamps
+                layout: vertical
+                fill_container: true
+                icon: mdi:lamps
+                tap_action:
+                  action: call-service
+                  service: light.toggle
+                  data:
+                    kelvin: 3000
+                    brightness_pct: 100
+                  target:
+                    entity_id: light.bedroom_lamps
+                double_tap_action:
+                  action: call-service
+                  service: light.turn_on
+                  data:
+                    kelvin: 2500
+                    brightness_pct: 25
+                  target:
+                    entity_id: light.bedroom_lamps
+              - type: vertical-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: light.maxs_lamp
+                    icon: mdi:lamp
+                    tap_action:
+                      action: toggle
+                  - type: custom:mushroom-entity-card
+                    entity: light.sophies_lamp
+                    icon: mdi:lamp
+                    tap_action:
+                      action: toggle
+          - type: custom:mushroom-entity-card
+            entity: light.bedroom_ceiling_lights
+            icon: mdi:ceiling-light
+            tap_action:
+              action: call-service
+              service: light.toggle
+              data:
+                kelvin: 3000
+                brightness_pct: 100
+              target:
+                entity_id: light.bedroom_ceiling_lights
+            double_tap_action:
+              action: call-service
+              service: light.turn_on
+              data:
+                kelvin: 2500
+                brightness_pct: 25
+              target:
+                entity_id: light.bedroom_ceiling_lights
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.christmas_tree_current_consumption
+                color: "#ccc"
+                name: Tree Power
+            hours_to_show: 3
+            points_per_hour: 6
+            show:
+              labels: hover
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.bedroom_heater_current_consumption
+                color: "#ccc"
+                name: Heater Power
+            hours_to_show: 3
+            points_per_hour: 6
+            show:
+              labels: hover
+      - type: custom:mushroom-title-card
+        title: Garage
+        alignment: center
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: entity
+            entity: binary_sensor.contact_sensor_1
+          - type: entity
+            entity: binary_sensor.motion_sensor_1_iaszone
+        alignment: center
+      - show_state: false
+        show_name: true
+        camera_view: live
+        type: picture-entity
+        entity: camera.blink_garage
+        camera_image: camera.blink_garage
+        theme: minimalist-desktop
+        tap_action:
+          action: call-service
+          service: blink.trigger_camera
+          data: {}
+          target:
+            entity_id: camera.blink_garage
+  - theme: minimalist-desktop
+    icon: mdi:alarm
+    type: custom:vertical-layout
+    title: Alarm Configuration
+    path: alarm
+    badges: []
+    cards:
+      - type: custom:mushroom-title-card
+        title: Alarm Configuration
+        alignment: center
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: entity
+            entity: input_boolean.alarm_enable
+            icon: mdi:alarm
+            tap_action:
+              action: toggle
+            icon_color: orange
+        alignment: center
+      - type: custom:time-picker-card
+        entity: input_datetime.alarm_time
+        hour_mode: 12
+        hour_step: 1
+        minute_step: 5
+        layout:
+          hour_mode: single
+          align_controls: center
+          name: inside
+          embedded: false
+          thin: false
+        hide:
+          seconds: true
+          name: false
+          icon: false
+        link_values: false
+        card_mod:
+          style: |
+            .time-input {
+              border-radius: 5px;
+              background: #ccc;
+            }
+      - type: entities
+        entities:
+          - entity: input_number.alarm_duration
+            icon: mdi:timer
+        show_header_toggle: false
+      - type: entities
+        entities:
+          - entity: input_number.alarm_temperature_low
+            name: Alarm Temp. Start
+          - entity: input_number.alarm_temperature_high
+            name: Alarm Temp. End
+  - theme: minimalist-desktop
+    title: Octoprint
+    path: octoprint
+    icon: mdi:printer-3d-nozzle
+    type: panel
+    badges: []
+    cards:
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: entities
+            entities:
+              - entity: binary_sensor.octoprint_printing
+              - entity: binary_sensor.octoprint_printing_error
+              - entity: sensor.octoprint_actual_bed_temp
+              - entity: sensor.octoprint_target_bed_temp
+              - entity: sensor.octoprint_actual_tool0_temp
+              - entity: sensor.octoprint_target_tool0_temp
+              - entity: sensor.octoprint_current_state
+              - entity: sensor.octoprint_job_percentage
+              - entity: sensor.octoprint_estimated_finish_time
+              - entity: sensor.octoprint_start_time
+              - entity: button.octoprint_resume_job
+              - entity: button.octoprint_pause_job
+              - entity: button.octoprint_stop_job
+            title: Office
+  - theme: minimalist-desktop
+    title: Services
+    path: services
+    icon: mdi:account-wrench-outline
+    visible:
+      - user: 5c1953b4f9e049b0abf7f5812359fce6
+    type: custom:vertical-layout
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:mushroom-title-card
+            title: Trigger Services
+            alignment: center
+          - type: markdown
+            content: |-
+              ### Usage
+
+              ---
+
+              - Single Press: show entity details
+              - Long Press: reset device in HomeKit
+            theme: minimalist-mobile
+          - type: custom:mushroom-entity-card
+            entity: switch.christmas_tree
+            hold_action:
+              action: call-service
+              service: homekit.reset_accessory
+              data: {}
+              target:
+                entity_id: switch.christmas_tree
+          - type: custom:mushroom-entity-card
+            entity: switch.bedroom_heater
+            hold_action:
+              action: call-service
+              service: homekit.reset_accessory
+              data: {}
+              target:
+                entity_id: switch.bedroom_heater
+          - type: custom:mushroom-entity-card
+            entity: light.bedroom_lamps
+            hold_action:
+              action: call-service
+              service: homekit.reset_accessory
+              data: {}
+              target:
+                entity_id: switch.bedroom_lamp
+            icon: mdi:lamps
+          - type: custom:mushroom-entity-card
+            entity: light.bedroom_ceiling_lights
+            hold_action:
+              action: call-service
+              service: homekit.reset_accessory
+              data: {}
+              target:
+                entity_id: switch.bedroom_lamp
+            icon: mdi:ceiling-light
