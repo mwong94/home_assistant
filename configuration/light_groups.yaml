@@ -1,0 +1,23 @@
+- platform: group
+  name: Bedroom Ceiling Lights
+  unique_id: bedroom_ceiling_lights
+  entities:
+    - light.bedroom_ceiling_light_1
+    - light.bedroom_ceiling_light_2
+  all: true
+
+- platform: group
+  name: Bedroom Lamps
+  unique_id: bedroom_lamps
+  entities:
+    - light.maxs_lamp
+    - light.sophies_lamp
+  all: true
+
+- platform: group
+  name: Bedroom Lights
+  unique_id: bedroom_lights
+  entities:
+    - light.bedroom_ceiling_lights
+    - light.bedroom_lamps
+  all: true

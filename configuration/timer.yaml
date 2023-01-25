@@ -1,0 +1,3 @@
+contact_sensor_debounce:
+  name: Contact Sensor Debounce
+  duration: "00:00:05"

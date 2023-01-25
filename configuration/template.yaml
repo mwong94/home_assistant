@@ -1,0 +1,26 @@
+- sensor:
+    - name: Car Charge Level
+      unique_id: car_charge_level
+      unit_of_measurement: "%"
+      state: >-
+        {% set charge_level = state_attr('sensor.fordpass_elVeh', 'Battery Fill Level') %}
+        {{ '%0.1f' | format(charge_level|float) }}
+- sensor:
+    - name: Car Range
+      unique_id: car_range
+      unit_of_measurement: "mi"
+      state: >-
+        {% set range_km = state_attr('sensor.fordpass_elVeh', 'elVehDTE') %}
+        {% set range_mi = range_km / 1.609 %}
+        {{ '%0.1f' | format(range_mi|float) }}
+- sensor:
+    - name: Car Charge Status
+      unique_id: car_charge_status
+      state: >-
+        {% set charge_status = int(state_attr('sensor.fordpass_elVeh', 'Plug Status'), 0) %}
+        {% if charge_status == 1 %}
+        {% set charge_status_message = "Charging" %}
+        {% else %}
+        {% set charge_status_message = "Unplugged" %}
+        {% endif %}
+        {{ charge_status_message }}

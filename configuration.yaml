@@ -5,37 +5,6 @@ default_config:
 frontend:
   themes: !include_dir_merge_named themes
 
-sensor:
-  - platform: template
-    sensors:
-      car_charge_level:
-        friendly_name: "Car Charge Level"
-        unit_of_measurement: "%"
-        value_template: >-
-          {% set charge_level = state_attr('sensor.fordpass_elVeh', 'Battery Fill Level') %}
-          {{ '%0.1f' | format(charge_level|float) }}
-  - platform: template
-    sensors:
-      car_range:
-        friendly_name: "Car Range"
-        unit_of_measurement: "mi"
-        value_template: >-
-          {% set range_km = state_attr('sensor.fordpass_elVeh', 'elVehDTE') %}
-          {% set range_mi = range_km / 1.609 %}
-          {{ '%0.1f' | format(range_mi|float) }}
-  - platform: template
-    sensors:
-      car_charge_status:
-        friendly_name: "Car Charge Status"
-        value_template: >-
-          {% set charge_status = int(state_attr('sensor.fordpass_elVeh', 'Plug Status'), 0) %}
-          {% if charge_status == 1 %}
-          {% set charge_status_message = "Charging" %}
-          {% else %}
-          {% set charge_status_message = "Unplugged" %}
-          {% endif %}
-          {{ charge_status_message }}
-
 # Text to speech
 tts:
   - platform: google_translate
@@ -44,25 +13,25 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+homekit: !include configuration/homekit.yaml
+template: !include configuration/template.yaml
+timer: !include configuration/timer.yaml
+input_boolean: !include configuration/input_boolean.yaml
+input_number: !include configuration/input_number.yaml
+input_datetime: !include configuration/input_datetime.yaml
+input_button: !include configuration/input_button.yaml
+
+light groups: !include configuration/light_groups.yaml
+
 http:
   use_x_forwarded_for: true
   trusted_proxies:
     - 172.30.0.0/16
-
-homekit:
-  filter:
-    include_entities:
-      - camera.blink_garage
-      - switch.christmas_tree
-      - switch.bedroom_heater
-      - light.bedroom_lamps
-      - light.bedroom_ceiling_lights
-
-timer:
-  contact_sensor_debounce:
-    name: Contact Sensor Debounce
-    duration: "00:00:05"
-input_boolean:
-  contact_sensor_latch:
-    name: Contact Sensor Latch
-    initial: off
+# timer:
+#   contact_sensor_debounce:
+#     name: Contact Sensor Debounce
+#     duration: "00:00:05"
+# input_boolean:
+#   contact_sensor_latch:
+#     name: Contact Sensor Latch
+#     initial: off

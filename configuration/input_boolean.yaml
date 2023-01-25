@@ -1,0 +1,7 @@
+contact_sensor_latch:
+  name: Contact Sensor Latch
+  initial: off
+
+alarm_enable:
+  name: Alarm Enable
+  initial: off

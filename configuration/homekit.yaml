@@ -1,0 +1,7 @@
+filter:
+  include_entities:
+    - camera.blink_garage
+    - switch.christmas_tree
+    - switch.bedroom_heater
+    - light.bedroom_lamps
+    - light.bedroom_ceiling_lights

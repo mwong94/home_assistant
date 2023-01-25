@@ -1,0 +1,18 @@
+## CHRISTMAS TREE ON/OFF TIMES
+christmas_tree_on:
+  name: Christmas Tree On Time
+  icon: mdi:pine-tree
+  has_date: false
+  has_time: true
+christmas_tree_off:
+  name: Christmas Tree On Time
+  icon: mdi:pine-tree
+  has_date: false
+  has_time: true
+
+## SUNRISE ALARM CLOCK TIME
+alarm_time:
+  name: Alarm Time
+  icon: mdi:alarm
+  has_date: false
+  has_time: true
