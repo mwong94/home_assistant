@@ -1,3 +1,4 @@
 home-assistant*
 zigbee.db*
 .storage
+**/*fordpass_token.txt
