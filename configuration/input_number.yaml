@@ -2,20 +2,23 @@
 alarm_duration:
   name: Alarm Duration
   icon: mdi:clock
-  initial: 30
+  unit_of_measurement: min.
+  initial: 60
   min: 0
   max: 120
   step: 5
 alarm_temperature_low:
   name: Alarm Temperature Low
-  icon: mdi:arrow-down-bold
+  icon: mdi:thermometer-low
+  unit_of_measurement: K
   initial: 2500
   min: 2000
   max: 8000
   step: 100
 alarm_temperature_high:
   name: Alarm Temperature High
-  icon: mdi:arrow-up-bold
+  icon: mdi:thermometer-high
+  unit_of_measurement: K
   initial: 6500
   min: 2000
   max: 8000

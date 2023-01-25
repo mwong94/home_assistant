@@ -69,6 +69,7 @@ const vt=1,gt=t=>(...e)=>({_$litDirective$:t,values:e});class ft{constructor(t){
         text-align: center;
         font-size: 1em;
         cursor: pointer;
+        border-radius: 12px;
       }
 
       .time-period.active {
@@ -115,6 +116,7 @@ const vt=1,gt=t=>(...e)=>({_$litDirective$:t,values:e});class ft{constructor(t){
         background: var(--tpc-elements-background-color);
         border: 0;
         border-bottom: 2px solid var(--tpc-elements-background-color);
+        border-radius: 12px;
         color: var(--tpc-text-color, #fff);
         text-align: center;
         font-size: 1em;
