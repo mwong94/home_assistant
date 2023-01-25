@@ -5,3 +5,7 @@ contact_sensor_latch:
 alarm_enable:
   name: Alarm Enable
   initial: off
+
+car_notification_sent:
+  name: Car Unplug Notification
+  initial: off

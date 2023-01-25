@@ -3,8 +3,8 @@
       unique_id: car_charge_level
       unit_of_measurement: "%"
       state: >-
-        {% set charge_level = state_attr('sensor.fordpass_elVeh', 'Battery Fill Level') %}
-        {{ '%0.1f' | format(charge_level|float) }}
+        {% set charge_level = float(state_attr('sensor.fordpass_elVeh', 'Battery Fill Level'), 0) %}
+        {{ '%d' | format(charge_level|int) }}
 - sensor:
     - name: Car Range
       unique_id: car_range

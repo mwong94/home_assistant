@@ -1,226 +1,276 @@
-- id: "1669073223942"
+- id: '1669073223942'
   alias: Christmas Tree on
   trigger:
-    - platform: time
-      at: "17:00:00"
+  - platform: time
+    at: '17:00:00'
   condition: []
   action:
-    - type: turn_on
-      device_id: 8f2080282654ddf8b3990c5cf2ca3520
-      entity_id: light.christmas_tree
-      domain: light
+  - type: turn_on
+    device_id: 8f2080282654ddf8b3990c5cf2ca3520
+    entity_id: light.christmas_tree
+    domain: light
   mode: single
-- id: "1674110712188"
+- id: '1674110712188'
   alias: Auto Trigger Camera
   description: Triggers blink Garage Cam every 20 seconds
   trigger:
-    - platform: time_pattern
-      seconds: /20
-      hours: "*"
-      minutes: "*"
+  - platform: time_pattern
+    seconds: /20
+    hours: '*'
+    minutes: '*'
   condition: []
   action:
-    - service: blink.trigger_camera
-      data: {}
-      target:
-        entity_id: camera.blink_garage
+  - service: blink.trigger_camera
+    data: {}
+    target:
+      entity_id: camera.blink_garage
   mode: single
-- id: "1674111226287"
+- id: '1674111226287'
   alias: Christmas Tree off
   description: Toggle christmas tree on and off, 7pm - 11pm
   trigger:
-    - platform: time
-      at: "23:00:00"
+  - platform: time
+    at: '23:00:00'
   condition: []
   action:
-    - type: turn_off
-      device_id: 8f2080282654ddf8b3990c5cf2ca3520
-      entity_id: light.christmas_tree
-      domain: light
+  - type: turn_off
+    device_id: 8f2080282654ddf8b3990c5cf2ca3520
+    entity_id: light.christmas_tree
+    domain: light
   mode: single
-- id: "1674501781332"
+- id: '1674501781332'
   alias: Bedroom Heater On
   trigger:
-    - platform: time
-      at: 01:30:00
+  - platform: time
+    at: 01:30:00
   condition: []
   action:
-    - type: turn_on
-      device_id: 7e6a7bc275c34ae5a8a5c3d1ee327571
-      entity_id: switch.bedroom_heater
-      domain: switch
+  - type: turn_on
+    device_id: 7e6a7bc275c34ae5a8a5c3d1ee327571
+    entity_id: switch.bedroom_heater
+    domain: switch
   mode: single
-- id: "1674501815032"
+- id: '1674501815032'
   alias: Bedroom Heater Off
   trigger:
-    - platform: time
-      at: 07:00:00
+  - platform: time
+    at: 07:00:00
   condition: []
   action:
-    - type: turn_off
-      device_id: 7e6a7bc275c34ae5a8a5c3d1ee327571
-      entity_id: switch.bedroom_heater
-      domain: switch
+  - type: turn_off
+    device_id: 7e6a7bc275c34ae5a8a5c3d1ee327571
+    entity_id: switch.bedroom_heater
+    domain: switch
   mode: single
-- id: "1674508428772"
+- id: '1674508428772'
   alias: Remote Button - Ceiling Light
   description: toggle bedroom ceiling light
   trigger:
-    - device_id: d35ec59ade6458598d000b11f075dacd
-      domain: zha
-      platform: device
-      type: remote_button_short_press
-      subtype: remote_button_short_press
+  - device_id: d35ec59ade6458598d000b11f075dacd
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: remote_button_short_press
   condition: []
   action:
-    - service: light.toggle
-      data:
-        kelvin: 2750
-        brightness_pct: 100
-      target:
-        entity_id:
-          - light.bedroom_ceiling_lights
+  - service: light.toggle
+    data:
+      kelvin: 2750
+      brightness_pct: 100
+    target:
+      entity_id:
+      - light.bedroom_ceiling_lights
   mode: single
-- id: "1674508468997"
+- id: '1674508468997'
   alias: Remote Button - Lamps
   description: toggle bedroom lamps
   trigger:
-    - device_id: d35ec59ade6458598d000b11f075dacd
-      domain: zha
-      platform: device
-      type: remote_button_double_press
-      subtype: remote_button_double_press
+  - device_id: d35ec59ade6458598d000b11f075dacd
+    domain: zha
+    platform: device
+    type: remote_button_double_press
+    subtype: remote_button_double_press
   condition: []
   action:
-    - service: light.toggle
-      data:
-        kelvin: 2750
-        brightness_pct: 100
-      target:
-        entity_id: light.bedroom_lamps
+  - service: light.toggle
+    data:
+      kelvin: 2750
+      brightness_pct: 100
+    target:
+      entity_id: light.bedroom_lamps
   mode: single
-- id: "1674511988799"
+- id: '1674511988799'
   alias: Weekday Sunrise Alarm
-  description:
-    Increases light brightness and warmth over several minutes as an alarm
+  description: Increases light brightness and warmth over several minutes as an alarm
     clock
   trigger:
-    - platform: time
-      at: input_datetime.alarm_time
+  - platform: time
+    at: input_datetime.alarm_time
   condition:
-    - condition: time
-      after: 00:00:00
-      before: "23:59:00"
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-    - condition: state
-      entity_id: input_boolean.alarm_enable
-      state: "on"
+  - condition: time
+    after: 00:00:00
+    before: '23:59:00'
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: state
+    entity_id: input_boolean.alarm_enable
+    state: 'on'
   action:
-    - service: light.turn_on
-      data:
-        brightness_pct: 10
-        kelvin: "{{ states('input_number.alarm_temperature_low') | int }}"
-      target:
-        entity_id:
-          - light.bedroom_lamps
-          - light.bedroom_ceiling_lights
-    - delay:
-        hours: 0
-        minutes: 0
-        seconds: 0
-        milliseconds: 500
-    - service: light.turn_on
-      data:
-        transition: 600
-        brightness_pct: 85
-        kelvin: "{{ states('input_number.alarm_temperature_high') | int }}"
-      target:
-        entity_id:
-          - light.bedroom_lamps
-          - light.bedroom_ceiling_lights
+  - service: light.turn_on
+    data:
+      brightness_pct: 10
+      kelvin: '{{ states(''input_number.alarm_temperature_low'') | int }}'
+    target:
+      entity_id:
+      - light.bedroom_lamps
+      - light.bedroom_ceiling_lights
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - service: light.turn_on
+    data:
+      transition: 600
+      brightness_pct: 85
+      kelvin: '{{ states(''input_number.alarm_temperature_high'') | int }}'
+    target:
+      entity_id:
+      - light.bedroom_lamps
+      - light.bedroom_ceiling_lights
   mode: single
-- id: "1674590389509"
+- id: '1674590389509'
   alias: Garage Door Notification
   trigger:
-    - type: opened
-      platform: device
-      device_id: d10bfed67f09ed456ad2dabb1311dc96
-      entity_id: binary_sensor.contact_sensor_1
-      domain: binary_sensor
-    - type: not_opened
-      platform: device
-      device_id: d10bfed67f09ed456ad2dabb1311dc96
-      entity_id: binary_sensor.contact_sensor_1
-      domain: binary_sensor
+  - type: opened
+    platform: device
+    device_id: d10bfed67f09ed456ad2dabb1311dc96
+    entity_id: binary_sensor.contact_sensor_1
+    domain: binary_sensor
+  - type: not_opened
+    platform: device
+    device_id: d10bfed67f09ed456ad2dabb1311dc96
+    entity_id: binary_sensor.contact_sensor_1
+    domain: binary_sensor
   condition:
-    - condition: state
-      entity_id: input_boolean.contact_sensor_latch
-      state: "off"
+  - condition: state
+    entity_id: input_boolean.contact_sensor_latch
+    state: 'off'
   action:
-    - service: notify.mobile_app_maxs_iphone
-      data:
-        title: Garage Door
-        message:
-          Door {% if states("binary_sensor.contact_sensor_1") == "off" %}closed.
-          {% else %}opened. {% endif %}
-    - service: input_boolean.turn_on
-      data: {}
-      target:
-        entity_id: input_boolean.contact_sensor_latch
-    - service: timer.start
-      data: {}
-      target:
-        entity_id: timer.contact_sensor_debounce
+  - service: notify.notify
+    data:
+      title: Garage Door
+      message: Door {% if states("binary_sensor.contact_sensor_1") == "off" %}closed.
+        {% else %}opened. {% endif %}
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.contact_sensor_latch
+  - service: timer.start
+    data: {}
+    target:
+      entity_id: timer.contact_sensor_debounce
   mode: single
-- id: "1674593416910"
+- id: '1674593416910'
   alias: Contact Sensor Disable Latch
   trigger:
-    - platform: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.contact_sensor_debounce
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.contact_sensor_debounce
   condition: []
   action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.contact_sensor_latch
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.contact_sensor_latch
   mode: single
-- id: "1674628503342"
+- id: '1674628503342'
   alias: Remote Button - Bedroom Lights
   description: toggle all bedroom lights
   trigger:
-    - device_id: d35ec59ade6458598d000b11f075dacd
-      domain: zha
-      platform: device
-      type: remote_button_long_release
-      subtype: remote_button_long_release
+  - device_id: d35ec59ade6458598d000b11f075dacd
+    domain: zha
+    platform: device
+    type: remote_button_long_release
+    subtype: remote_button_long_release
   condition: []
   action:
-    - service: light.toggle
-      data:
-        kelvin: 2750
-        brightness_pct: 100
-      target:
-        entity_id:
-          - light.bedroom_ceiling_lights
-          - light.bedroom_lamps
+  - service: light.toggle
+    data:
+      kelvin: 2750
+      brightness_pct: 100
+    target:
+      entity_id:
+      - light.bedroom_ceiling_lights
+      - light.bedroom_lamps
   mode: single
-- id: "1674632598189"
+- id: '1674632598189'
   alias: Mach-E departure
   trigger:
-    - platform: device
+  - platform: device
+    device_id: 44336d277ff636cbb5a6eafcae275284
+    domain: device_tracker
+    entity_id: device_tracker.fordpass_tracker
+    type: leaves
+    zone: zone.home
+  condition: []
+  action:
+  - service: notify.mobile_app_maxs_iphone
+    data:
+      message: Mach-E left the apartment
+  mode: single
+- id: '1674679070818'
+  alias: Mach-E Unplugged Notification
+  description: ''
+  trigger:
+  - platform: time
+    at: '21:00:00'
+  - platform: time
+    at: '22:00:00'
+  - platform: time
+    at: '23:00:00'
+  - platform: time
+    at: 00:00:00
+  condition:
+  - condition: and
+    conditions:
+    - condition: device
       device_id: 44336d277ff636cbb5a6eafcae275284
       domain: device_tracker
       entity_id: device_tracker.fordpass_tracker
-      type: leaves
-      zone: zone.home
+      type: is_home
+    - condition: state
+      entity_id: sensor.car_charge_status
+      state: Unplugged
+    - condition: numeric_state
+      entity_id: sensor.car_charge_level
+      below: 80
+    - condition: state
+      entity_id: input_boolean.car_notification_sent
+      state: 'off'
+  action:
+  - service: notify.notify
+    data:
+      message: Car charge is at {{ states('sensor.car_charge_level') }}%.
+      title: Charge Car?
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.car_notification_sent
+  mode: single
+- id: '1674680115623'
+  alias: Nightly Reset
+  description: ''
+  trigger:
+  - platform: time
+    at: 03:00:00
   condition: []
   action:
-    - service: notify.mobile_app_maxs_iphone
-      data:
-        message: Mach-E left the apartment
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id: input_boolean.car_notification_sent
   mode: single
