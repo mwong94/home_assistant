@@ -23,6 +23,18 @@ sensor:
           {% set range_km = state_attr('sensor.fordpass_elVeh', 'elVehDTE') %}
           {% set range_mi = range_km / 1.609 %}
           {{ '%0.1f' | format(range_mi|float) }}
+  - platform: template
+    sensors:
+      car_charge_status:
+        friendly_name: "Car Charge Status"
+        value_template: >-
+          {% set charge_status = int(state_attr('sensor.fordpass_elVeh', 'Plug Status'), 0) %}
+          {% if charge_status == 1 %}
+          {% set charge_status_message = "Charging" %}
+          {% else %}
+          {% set charge_status_message = "Unplugged" %}
+          {% endif %}
+          {{ charge_status_message }}
 
 # Text to speech
 tts:
