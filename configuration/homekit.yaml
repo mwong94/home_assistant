@@ -5,3 +5,4 @@ filter:
     - switch.bedroom_heater
     - light.bedroom_lamps
     - light.bedroom_ceiling_lights
+    - binary_sensor.contact_sensor_1
