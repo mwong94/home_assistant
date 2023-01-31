@@ -18,6 +18,7 @@ scene: !include scenes.yaml
 homekit: !include configuration/homekit.yaml
 template: !include configuration/template.yaml
 timer: !include configuration/timer.yaml
+switch: !include configuration/switch.yaml
 input_boolean: !include configuration/input_boolean.yaml
 input_number: !include configuration/input_number.yaml
 input_datetime: !include configuration/input_datetime.yaml
@@ -29,11 +30,7 @@ http:
   use_x_forwarded_for: true
   trusted_proxies:
     - 172.30.0.0/16
-# timer:
-#   contact_sensor_debounce:
-#     name: Contact Sensor Debounce
-#     duration: "00:00:05"
-# input_boolean:
-#   contact_sensor_latch:
-#     name: Contact Sensor Latch
-#     initial: off
+
+device_tracker:
+  - platform: bluetooth_tracker
+    device_id: 0

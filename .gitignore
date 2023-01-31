@@ -2,3 +2,10 @@ home-assistant*
 zigbee.db*
 .storage
 **/*fordpass_token.txt
+testing
+**/*.backup
+node-red/lib
+node-red/nodes
+node-red/node_modules
+node-red/.*
+custom_components

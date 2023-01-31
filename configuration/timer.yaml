@@ -1,3 +1,7 @@
 contact_sensor_debounce:
   name: Contact Sensor Debounce
   duration: "00:00:05"
+
+bedroom_occupancy:
+  name: Bedroom Occupancy Timer
+  duration: "00:01:00"

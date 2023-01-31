@@ -6,6 +6,18 @@ alarm_enable:
   name: Alarm Enable
   initial: off
 
+heater_automation_enable:
+  name: Heater Automation Enable
+  initial: on
+
+christmas_tree_automation_enable:
+  name: Christmas Tree Automation Enable
+  initial: on
+
 car_notification_sent:
   name: Car Unplug Notification
+  initial: off
+
+bedroom_occupancy:
+  name: Bedroom Occupancy
   initial: off

@@ -5,14 +5,35 @@ christmas_tree_on:
   has_date: false
   has_time: true
 christmas_tree_off:
-  name: Christmas Tree On Time
+  name: Christmas Tree Off Time
   icon: mdi:pine-tree
   has_date: false
   has_time: true
+
+## BEDROOM HEATER ON/OFF
+heater_on:
+  name: Bedroom Heater On Time
+  icon: mdi:radiator
+  has_date: false
+  has_time: true
+  initial: 01:30
+heater_off:
+  name: Bedroom Heater Off Time
+  icon: mdi:radiator-off
+  has_date: false
+  has_time: true
+  initial: 07:00
 
 ## SUNRISE ALARM CLOCK TIME
 alarm_time:
   name: Alarm Time
   icon: mdi:alarm
+  has_date: false
+  has_time: true
+
+## OPEN BLINDS REMINDER
+open_blinds:
+  name: Open Blinds Reminder Time
+  icon: mdi:blinds
   has_date: false
   has_time: true

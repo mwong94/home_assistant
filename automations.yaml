@@ -207,45 +207,6 @@
       - light.bedroom_ceiling_lights
       - light.bedroom_lamps
   mode: single
-- id: '1674679070818'
-  alias: Mach-E Charge Reminder (time based)
-  description: ''
-  trigger:
-  - platform: time
-    at: '21:00:00'
-  - platform: time
-    at: '22:00:00'
-  - platform: time
-    at: '23:00:00'
-  - platform: time
-    at: 00:00:00
-  condition:
-  - condition: and
-    conditions:
-    - condition: device
-      device_id: 44336d277ff636cbb5a6eafcae275284
-      domain: device_tracker
-      entity_id: device_tracker.fordpass_tracker
-      type: is_home
-    - condition: state
-      entity_id: sensor.car_charge_status
-      state: Unplugged
-    - condition: numeric_state
-      entity_id: sensor.car_charge_level
-      below: 80
-    - condition: state
-      entity_id: input_boolean.car_notification_sent
-      state: 'off'
-  action:
-  - service: notify.notify
-    data:
-      message: Car charge is at {{ states('sensor.car_charge_level') }}%.
-      title: Charge Car?
-  - service: input_boolean.turn_on
-    data: {}
-    target:
-      entity_id: input_boolean.car_notification_sent
-  mode: single
 - id: '1674680115623'
   alias: Nightly Reset
   description: ''
@@ -259,101 +220,98 @@
     target:
       entity_id: input_boolean.car_notification_sent
   mode: single
-- id: '1674682751747'
-  alias: Mach-E Entered Zone
-  trigger:
-  - platform: device
-    device_id: 44336d277ff636cbb5a6eafcae275284
-    domain: device_tracker
-    entity_id: device_tracker.fordpass_tracker
-    type: enters
-    zone: zone.home
-  - platform: device
-    device_id: 44336d277ff636cbb5a6eafcae275284
-    domain: device_tracker
-    entity_id: device_tracker.fordpass_tracker
-    type: enters
-    zone: zone.rch
-  - platform: device
-    device_id: 44336d277ff636cbb5a6eafcae275284
-    domain: device_tracker
-    entity_id: device_tracker.fordpass_tracker
-    type: enters
-    zone: zone.clinic
-  condition: []
-  action:
-  - service: notify.mobile_app_maxs_iphone
-    data:
-      message: 'Mach-E entered location: {{ states(''device_tracker.fordpass_tracker'')
-        }}'
-  - delay:
-      hours: 0
-      minutes: 5
-      seconds: 0
-      milliseconds: 0
-    enabled: false
-  - service: automation.trigger
-    data:
-      skip_condition: false
-    target:
-      entity_id: automation.mach_e_charge_reminder
-  mode: single
-- id: '1674683202487'
-  alias: Mach-E Left Zone
-  trigger:
-  - platform: device
-    device_id: 44336d277ff636cbb5a6eafcae275284
-    domain: device_tracker
-    entity_id: device_tracker.fordpass_tracker
-    type: leaves
-    zone: zone.home
-  - platform: device
-    device_id: 44336d277ff636cbb5a6eafcae275284
-    domain: device_tracker
-    entity_id: device_tracker.fordpass_tracker
-    type: leaves
-    zone: zone.rch
-  - platform: device
-    device_id: 44336d277ff636cbb5a6eafcae275284
-    domain: device_tracker
-    entity_id: device_tracker.fordpass_tracker
-    type: leaves
-    zone: zone.clinic
-  condition: []
-  action:
-  - service: notify.mobile_app_maxs_iphone
-    data:
-      message: 'Mach-E left location: {{ states(''device_tracker.fordpass_tracker'')
-        }}'
-  mode: single
-- id: '1674683603504'
-  alias: Mach-E Charge Reminder
+- id: '1674835764551'
+  alias: Bedroom Motion Detected
   description: ''
   trigger:
+  - type: motion
+    platform: device
+    device_id: 4d9df635d9c3c788dc31b57876aae6b3
+    entity_id: binary_sensor.motion_sensor_1_iaszone
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: timer.start
+    target:
+      entity_id: timer.bedroom_occupancy
+    data: {}
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.bedroom_occupancy
+  mode: single
+- id: '1674835953219'
+  alias: Bedroom Occupancy Timer Finished
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - timer.bedroom_occupancy
+    from: active
+    to: idle
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - type: is_motion
+        condition: device
+        device_id: 4d9df635d9c3c788dc31b57876aae6b3
+        entity_id: binary_sensor.motion_sensor_1_iaszone
+        domain: binary_sensor
+      sequence:
+      - service: timer.start
+        data: {}
+        target:
+          entity_id: timer.bedroom_occupancy
+    default:
+    - service: input_boolean.turn_off
+      data: {}
+      target:
+        entity_id: input_boolean.bedroom_occupancy
+  mode: single
+- id: '1674836816062'
+  alias: Bedroom Occupancy Detected
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.bedroom_occupancy
+    from: 'off'
+    to: 'on'
   condition:
   - condition: and
     conditions:
-    - condition: or
-      conditions:
-      - condition: device
-        device_id: 44336d277ff636cbb5a6eafcae275284
-        domain: device_tracker
-        entity_id: device_tracker.fordpass_tracker
-        type: is_home
-      - condition: zone
-        entity_id: device_tracker.fordpass_tracker
-        zone:
-        - zone.seaford
-        - zone.rch
-    - condition: state
-      entity_id: sensor.car_charge_status
-      state: Unplugged
-    - condition: numeric_state
-      entity_id: sensor.car_charge_level
-      below: 80
+    - type: is_illuminance
+      condition: device
+      device_id: 4d9df635d9c3c788dc31b57876aae6b3
+      entity_id: sensor.motion_sensor_1_illuminance
+      domain: sensor
+      below: 75
+    - type: is_off
+      condition: device
+      device_id: 0d4d49cf47d111fd2e8297483221f442
+      entity_id: binary_sensor.iphone_focus
+      domain: binary_sensor
   action:
-  - service: notify.notify
+  - service: light.turn_on
     data:
-      message: Battery is at {{ states('sensor.car_charge_level') }}%
-      title: Charge Car?
+      brightness_pct: 100
+    target:
+      entity_id: light.bedroom_lights
+  mode: single
+- id: '1674837170781'
+  alias: Bedroom Occupancy Stopped
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.bedroom_occupancy
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.bedroom_lights
   mode: single
